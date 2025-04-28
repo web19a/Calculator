@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 255, 0, 1), rgba(0, 255, 255, 1), rgba(0, 0, 255, 1));
+}
+
+.calc {
+    width: 90%;
+    max-width: 350px;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#ans {
+    width: calc(100% - 40px);
+    margin: 20px;
+    font-family: 'Loto sans-sarif', sans-serif;
+    font-size: 2.5rem;
+    outline: none;
+    text-align: right;
+    background: transparent;
+}
+
+.btn {
+    display: grid;
+    gap: 8px;
+    margin: 7px;
+    padding: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.btn input[type='button'] {
+    padding: 12px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all .5s ease;
+    background: transparent;
+    border-radius: 6px;
+    border: 1px solid #000;
+}
+
+.btn input[type='button']:hover {
+    background-color: black;
+    color: #fff;
+}
+
+/* Mobile First Adjustments */
+@media (max-width: 480px) {
+    .calc {
+        width: 95%;
+        height: auto;
+        min-height: 500px;
+    }
+    
+    #ans {
+        font-size: 2rem;
+        margin: 15px;
+        width: calc(100% - 30px);
+    }
+    
+    .btn input[type='button'] {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+}
+
+/* Tablet Adjustments */
+@media (min-width: 481px) and (max-width: 768px) {
+    .calc {
+        width: 70%;
+        max-width: 450px;
+    }
+    
+    #ans {
+        font-size: 2.2rem;
+    }
+}
+
+/* Desktop Adjustments */
+@media (min-width: 769px) {
+    .calc {
+        width: 40%;
+        max-width: 500px;
+    }
+    
+    .btn input[type='button'] {
+        padding: 15px 0;
+        font-size: 18px;
+    }
+}
